@@ -1,55 +1,46 @@
-# PaginaVideoJuegos
+Pagina VideoJuegos - Trabajo Práctico Final
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.5.
+Seminario Angular 2026
 
-## Development server
+Datos del estudiante
 
-To start a local development server, run:
 
-```bash
-ng serve
-```
+Nombre y Apellido: Santiago Carrillo
+DNI: 4477835
+Email: santiago03carrillo@gmail.com
+Sede: Tandil
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+Temática elegida
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+La aplicación es un catálogo de videojuegos gratuitos. Permite explorar una lista de juegos consumida desde una API externa (FreeToGame) y guardar los que más te interesen en una sección de favoritos.
 
-```bash
-ng generate component component-name
-```
+Secciones de la aplicación
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-```bash
-ng generate --help
-```
+Catálogo (/catalogo): muestra el listado completo de videojuegos obtenidos desde la API externa, con imagen, género, plataforma, descripción y un botón para agregar/quitar de favoritos.
+Favoritos (/favoritos): muestra únicamente los juegos que el usuario marcó como favoritos, con la opción de quitarlos.
 
-## Building
 
-To build the project run:
+Funcionalidades implementadas
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Ruteo entre dos secciones (Catálogo y Favoritos).
+Componentes: Catalogo, Favoritos y JuegoCard (componente reutilizable de tarjeta de juego).
+Interface Juego para tipar los datos.
+Uso de @if, @else if, @else y @for para controlar la renderización.
+Comunicación entre componentes mediante @Input() y un servicio compartido (JuegosService) que maneja el estado de favoritos usando signals.
+Consumo de API externa (FreeToGame API) mediante HttpClient con una solicitud GET para obtener y mostrar los juegos.
+Modal de "Leer más" para ver la descripción completa de cada juego.
+Estilos personalizados (SCSS) con diseño responsive tipo grid.
 
-## Running unit tests
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Tecnologías utilizadas:
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
+Angular (standalone components, signals, control de flujo @if/@for)
+TypeScript
+SCSS
+API externa: FreeToGame
 ```
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
