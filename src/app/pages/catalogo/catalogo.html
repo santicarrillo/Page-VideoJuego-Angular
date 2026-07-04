@@ -1,0 +1,15 @@
+<div class="catalogo-container">
+    <h1>Catálogo de Videojuegos</h1>
+
+    @if (cargando()) {
+    <p>Cargando juegos...</p>
+    } @else if (juegos().length === 0) {
+    <p>No se encontraron juegos.</p>
+    } @else {
+    <div class="lista-juegos">
+        @for (juego of juegos(); track juego.id) {
+        <app-juego-card [juego]="juego"></app-juego-card>
+        }
+    </div>
+    }
+</div>

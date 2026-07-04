@@ -1,0 +1,126 @@
+.card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s;
+    height: 100%;
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+
+    img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    h3 {
+        margin: 0.8rem 1rem 0.3rem;
+        color: #f1f1f1;
+        font-size: 1.1rem;
+        min-height: 2.6rem;
+    }
+
+    p {
+        margin: 0.2rem 1rem;
+        color: #cfcfcf;
+        font-size: 0.9rem;
+    }
+
+    .descripcion {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 4rem;
+    }
+
+    .leer-mas {
+        margin: 0 1rem 0.5rem;
+        background: none;
+        border: none;
+        color: #6c5ce7;
+        cursor: pointer;
+        font-size: 0.85rem;
+        text-align: left;
+        padding: 0;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .btn-favorito {
+        margin: 1rem;
+        margin-top: auto;
+        padding: 0.6rem;
+        border: none;
+        border-radius: 8px;
+        background-color: #6c5ce7;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: #5a4bd4;
+        }
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    color: #f1f1f1;
+
+    h3 {
+        margin-top: 0;
+        color: #6c5ce7;
+    }
+
+    button {
+        margin-top: 1rem;
+        padding: 0.5rem 1.2rem;
+        border: none;
+        border-radius: 8px;
+        background-color: #6c5ce7;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.btn-quitar {
+    margin: 1rem;
+    margin-top: auto;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #e74c3c;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #c0392b;
+    }
+}

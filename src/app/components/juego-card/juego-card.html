@@ -1,0 +1,29 @@
+<div class="card">
+    <img [src]="juego.thumbnail" [alt]="juego.title" />
+    <h3>{{ juego.title }}</h3>
+    <p><strong>Género:</strong> {{ juego.genre }}</p>
+    <p><strong>Plataforma:</strong> {{ juego.platform }}</p>
+
+    <p class="descripcion">{{ juego.short_description }}</p>
+    <button class="leer-mas" (click)="abrirModal()">Leer más</button>
+
+    @if (modoFavoritos) {
+    <button class="btn-quitar" (click)="toggleFavorito()">
+        🗑 Quitar de favoritos
+    </button>
+    } @else {
+    <button class="btn-favorito" (click)="toggleFavorito()">
+        {{ esFavorito() ? '★ Quitar de favoritos' : '☆ Agregar a favoritos' }}
+    </button>
+    }
+</div>
+
+@if (mostrarModal()) {
+<div class="modal-overlay" (click)="cerrarModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <h3>{{ juego.title }}</h3>
+        <p>{{ juego.short_description }}</p>
+        <button (click)="cerrarModal()">Cerrar</button>
+    </div>
+</div>
+}

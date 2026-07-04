@@ -1,0 +1,13 @@
+<div class="favoritos-container">
+    <h1>Mis Favoritos</h1>
+
+    @if (favoritos.length === 0) {
+    <p>Todavía no agregaste juegos a favoritos.</p>
+    } @else {
+    <div class="lista-juegos">
+        @for (juego of favoritos; track juego.id) {
+        <app-juego-card [juego]="juego" [modoFavoritos]="true"></app-juego-card>
+        }
+    </div>
+    }
+</div>
